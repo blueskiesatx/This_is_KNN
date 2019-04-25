@@ -1,10 +1,10 @@
 import pandas as pd
 import numpy as np
+import os
 from sklearn.preprocessing import LabelEncoder
 from keras.utils import to_categorical
 
-vtrainfile = '../voicedata/vtrain'
-vtestfile  = '../voicedata/vtest'
+vdatadir = '../voicedata'
 
 def data_encode(gtrain, gtest, ntrain, ntest, itrain, itest):
     # Label-encode gender
@@ -48,11 +48,13 @@ def data_encode(gtrain, gtest, ntrain, ntest, itrain, itest):
         nenc, enc_ntrain, enc_ntest, cat_ntrain, cat_ntest,
         ienc, enc_itrain, enc_itest, cat_itrain, cat_itest)
 
-def voicedata():
+def voicedata(vtrainf, vtestf):
     '''
     Function to load the train and test data and apply encoding preprocessing
     on gender, nationality and identity
     '''
+    vtrainfile = os.path.join(os.path.abspath(vdatadir), vtrainf)
+    vtestfile  = os.path.join(os.path.abspath(vdatadir), vtestf)
     # read pickle files
     traindf = pd.read_pickle(vtrainfile)
     testdf = pd.read_pickle(vtestfile)
