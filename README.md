@@ -2,6 +2,9 @@
 
 KNN stores the entire training dataset which it uses as its representation. KNN does not learn any model. KNN makes predictions just-in-time by calculating the similarity between an input sample and each training instance. There are many distance measures to choose from to match the structure of your input data. That it is a good idea to rescale your data, such as using normalization, when using KNN.
 
+![FindingK.jpg](Images/FindingK.jpg)
+
+
 This repository is part of my contribution to a group project. That repo was made private but here are the details:
 # Final Project - UT Data Science Bootcamp
 Title: Study of ML models for Voice Analysis
@@ -11,6 +14,8 @@ Team: Bharath, Choi, Christy, Mary, Roberto and Wini
 Goal: Analyze suitability of different Machine Learning models for voice analysis (Gender and Identity)
 
 Full dataset: 100,000 voice samples
+
+![voxceleb.jpg](Images/voxceleb.jpg)
 
 *High Level Plan:*
 
